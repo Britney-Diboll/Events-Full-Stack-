@@ -193,6 +193,14 @@
     <Compile Include="Migrations\201804261823489_WORK.Designer.cs">
       <DependentUpon>201804261823489_WORK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804262000496_AddedFkEventToAttendees.cs" />
+    <Compile Include="Migrations\201804262000496_AddedFkEventToAttendees.Designer.cs">
+      <DependentUpon>201804262000496_AddedFkEventToAttendees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804262018223_TookCityOffEvent.cs" />
+    <Compile Include="Migrations\201804262018223_TookCityOffEvent.Designer.cs">
+      <DependentUpon>201804262018223_TookCityOffEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\City.cs" />
@@ -277,6 +285,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804261823489_WORK.resx">
       <DependentUpon>201804261823489_WORK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804262000496_AddedFkEventToAttendees.resx">
+      <DependentUpon>201804262000496_AddedFkEventToAttendees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804262018223_TookCityOffEvent.resx">
+      <DependentUpon>201804262018223_TookCityOffEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,12 +7,16 @@ namespace Events.Models
 {
     public class Event
     {
+        public Event()
+        {
+            this.Attendees = new HashSet<Attendee>();
+        }
+
         public int ID { get; set; }
         public string Title { get; set; }
         public string Tagline { get; set; }
         public string LongDescription { get; set; }
         public string Address { get; set; }
-        public string City { get; set; }
         public string State { get; set; }
         public string ZIP { get; set; }
         public string AgeLimit { get; set; }
@@ -22,7 +26,7 @@ namespace Events.Models
         public int? CityID { get; set; }
         public City Cities { get; set; }
 
-        public int? AttendeeID { get; set; }
-        public Attendee Attendees { get; set; }
+        public virtual ICollection<Attendee> Attendees { get; set; }
+
     }
 }
