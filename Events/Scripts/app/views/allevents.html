@@ -1,0 +1,18 @@
+﻿<div>
+    <h1>All upcoming events in PROburg!</h1>
+
+    <!-- <table class="table table-hover">
+         <tr ng-repeat="event in events track by $index">
+             <td>{{event.Title}}</td>
+             <td>{{event.Tagline}}</td>
+             <td>{{event.Address}}, {{event.ZIP}}</td>
+             <td>{{event.DateHappening}}</td>
+         </tr>
+     </table>
+        -->
+
+    <div ng-repeat="event in events track by $index"
+         ng-include="'/Scripts/app/views/oneEvent.html'">
+
+    </div>
+</div>
