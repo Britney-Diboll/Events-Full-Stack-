@@ -28,6 +28,13 @@ namespace Events.Migrations
 
             context.Cities.AddOrUpdate(x => x.Name, PROburg);
 
+            var attend = new List<Attendee>
+            {
+                new Attendee {Email = "billybob@mail.com"},
+                new Attendee {Email = "timm-a@mail.com"}
+
+            };
+
             var events = new List<Event>
             {
                 new Event
@@ -61,15 +68,17 @@ namespace Events.Migrations
                 }
             };
 
+
+
             events.ForEach(e =>
             {
+                foreach (var att in attend)
+                {
+                    e.Attendees.Add(att);
+                }
                 context.Events.AddOrUpdate(a => a.Title, e);
             });
 
-            var attendees = new List<Attendee>
-            {
-
-            };
 
             context.SaveChanges();
         }

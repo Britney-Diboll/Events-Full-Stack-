@@ -1,17 +1,13 @@
-﻿using System;
+﻿using Events.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Events.Models
+namespace Events.ViewModels
 {
-    public class Event
+    public class EventVM
     {
-        public Event()
-        {
-            this.Attendees = new HashSet<Attendee>();
-        }
-
         public int ID { get; set; }
         public string Title { get; set; }
         public string Tagline { get; set; }
@@ -22,11 +18,8 @@ namespace Events.Models
         public string AgeLimit { get; set; }
         public decimal Price { get; set; }
         public DateTime DateHappening { get; set; }
+        public string City { get; set; }
 
-        public int? CityID { get; set; }
-        public City Cities { get; set; }
-
-        public ICollection<Attendee> Attendees { get; set; } = new HashSet<Attendee>();
-
+        public virtual ICollection<Attendee> Attendees { get; set; }
     }
 }
